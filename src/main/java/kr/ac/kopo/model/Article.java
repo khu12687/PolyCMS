@@ -3,7 +3,7 @@ package kr.ac.kopo.model;
 import java.util.Date;
 
 public class Article {
-	private Long articeId;
+	private Long articleId;
 	private String subject;
 	private String contents;
 	private Date regDate;
@@ -14,12 +14,12 @@ public class Article {
 	
 	private Long boardId;
 
-	public Long getArticeId() {
-		return articeId;
+	public Long getArticleId() {
+		return articleId;
 	}
 
-	public void setArticeId(Long articeId) {
-		this.articeId = articeId;
+	public void setArticleId(Long articleId) {
+		this.articleId = articleId;
 	}
 
 	public String getSubject() {

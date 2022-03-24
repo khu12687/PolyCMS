@@ -23,7 +23,6 @@ public class ArticleServiceImpl implements ArticleService{
 	@Override
 	public void add(Article item) {
 		dao.add(item);
-		
 	}
 
 	@Override

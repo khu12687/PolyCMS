@@ -16,7 +16,7 @@
 	</select>
 	
 	<update id="update">
-		UPDATE board_${boardId} SET subject=#{subject}, contents=#{contents}, edit_date=#{editDate}
+		UPDATE board_${boardId} SET subject=#{subject}, contents=#{contents}, edit_date= sysdate
 		WHERE article_id = #{articleId}
 	</update>
 	

@@ -17,10 +17,12 @@ import kr.ac.kopo.service.ArticleService;
 @RequestMapping("/board/{boardId}/article")
 public class ArticleController {
 	
-	final String path = "article";
+	final String path = "article/";
 	
 	@Autowired
 	ArticleService service;
+	
+	
 	
 	@GetMapping("/list")
 	public String list(@PathVariable Long boardId, Model model) {
@@ -58,7 +60,7 @@ public class ArticleController {
 	@PostMapping("/update/{articleId}")
 	public String update(@PathVariable Long boardId, @PathVariable Long articleId, Article item) {
 		item.setBoardId(boardId);
-		item.setArticeId(articleId);
+		item.setArticleId(articleId);
 		
 		service.update(item);
 		

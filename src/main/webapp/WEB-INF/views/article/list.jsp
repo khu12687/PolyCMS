@@ -9,18 +9,14 @@
 <body>
 	<div>
 		<div>
-			<h3>게시판 목록</h3>
+			<h3>${boardId }게시판 목록</h3>
 		</div>
 		<div>
 			<table border="1">
 				<thead>
 					<tr>
-						<th>게시판 번호</th>
-						<th>게시판명</th>
-						<th>댓글</th>
-						<th>첨부파일</th>
-						<th>공개</th>
-						<th>권한</th>
+						<th>게시글 번호</th>
+						<th>제목</th>
 						<th>관리</th>
 					</tr>
 				</thead>
@@ -32,13 +28,9 @@
 					</c:if>
 					<c:forEach var="item" items="${list }">				
 						<tr>
-							<td>${item.boardId }</td>
+							<td>${item.articleId }</td>
 							<td>${item.subject }</td>
-							<td>${item.reply }</td>
-							<td>${item.attach}</td>
-							<td>${item.secret }</td>
-							<td>${item.permission }</td>
-							<td><a href="update/${item.boardId }">변경</a> <a href="delete/${item.boardId }">삭제</a><a href="${item.boardId}/article/list">게시글</a></td>
+							<td><a href="update/${item.articleId }">변경</a> <a href="delete/${item.articleId }">삭제</a><a href="${item.articleId}/article/list">게시글</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

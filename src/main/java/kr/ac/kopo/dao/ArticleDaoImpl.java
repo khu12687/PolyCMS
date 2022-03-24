@@ -52,6 +52,4 @@ public class ArticleDaoImpl implements ArticleDao{
 		sql.delete("article.delete", map);		
 	}
 
-
-
 }
